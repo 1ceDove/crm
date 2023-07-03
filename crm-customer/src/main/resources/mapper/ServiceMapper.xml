@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.crm.customer.mapper.ServiceMapper">
+
+    <resultMap id="BaseResultMap" type="com.briup.crm.customer.bean.Service">
+            <id property="svrId" column="svr_id" jdbcType="BIGINT"/>
+            <result property="svrType" column="svr_type" jdbcType="VARCHAR"/>
+            <result property="svrTitle" column="svr_title" jdbcType="VARCHAR"/>
+            <result property="svrCustName" column="svr_cust_name" jdbcType="VARCHAR"/>
+            <result property="svrStatus" column="svr_status" jdbcType="VARCHAR"/>
+            <result property="svrRequest" column="svr_request" jdbcType="VARCHAR"/>
+            <result property="svrDispose" column="svr_dispose" jdbcType="VARCHAR"/>
+            <result property="svrHandle" column="svr_handle" jdbcType="VARCHAR"/>
+            <result property="svrResult" column="svr_result" jdbcType="VARCHAR"/>
+            <result property="svrSatisfy" column="svr_satisfy" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        svr_id,svr_type,svr_title,
+        svr_cust_name,svr_status,svr_request,
+        svr_dispose,svr_handle,svr_result,
+        svr_satisfy
+    </sql>
+</mapper>

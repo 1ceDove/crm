@@ -1,0 +1,18 @@
+server:
+  port: 8000 #eureka服务端口号
+spring:
+  application:
+    name: eurekaServer #eureka服务器名字 可以自定义
+#将eureka服务注册到注册中心,因为eureka自己本身也是一种微服务,所以需要对其进行注册
+eureka:
+  client:
+    service-url: #eureka服务的地址信息
+      defaultZone: http://localhost:8000/eureka
+    #表示注册中心自己也都要注册(到注册中心)进来,如果注册中心多可以相互注册,默认为false
+    register-with-eureka: false
+    fetch-registry: false
+  server: #配置服务器
+    #关闭自我保护机制,防止失效的服务也被一直访问(默认该配置是true)
+    enable-self-preservation: false
+    #每隔60s检查失效服务， 并从服务列表中移除(默认该配置就是60s)
+    eviction-interval-timer-in-ms: 60000

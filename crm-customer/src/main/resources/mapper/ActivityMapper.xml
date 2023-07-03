@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.crm.customer.mapper.ActivityMapper">
+
+    <resultMap id="BaseResultMap" type="com.briup.crm.customer.bean.Activity">
+            <id property="atvId" column="atv_id" jdbcType="BIGINT"/>
+            <result property="atvCustName" column="atv_cust_name" jdbcType="VARCHAR"/>
+            <result property="atvPlace" column="atv_place" jdbcType="VARCHAR"/>
+            <result property="atvTitle" column="atv_title" jdbcType="VARCHAR"/>
+            <result property="atvMemo" column="atv_memo" jdbcType="VARCHAR"/>
+            <result property="atvCustId" column="atv_cust_id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        atv_id,atv_cust_name,atv_place,
+        atv_title,atv_memo,atv_cust_id
+    </sql>
+</mapper>

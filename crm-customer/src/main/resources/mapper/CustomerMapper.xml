@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.crm.customer.mapper.CustomerMapper">
+
+    <resultMap id="BaseResultMap" type="com.briup.crm.customer.bean.Customer">
+            <id property="custId" column="cust_id" jdbcType="BIGINT"/>
+            <result property="custName" column="cust_name" jdbcType="VARCHAR"/>
+            <result property="custRegion" column="cust_region" jdbcType="VARCHAR"/>
+            <result property="custManagerId" column="cust_manager_id" jdbcType="BIGINT"/>
+            <result property="custManagerName" column="cust_manager_name" jdbcType="VARCHAR"/>
+            <result property="custLevelLabel" column="cust_level_label" jdbcType="VARCHAR"/>
+            <result property="custSatisfy" column="cust_satisfy" jdbcType="INTEGER"/>
+            <result property="custCredit" column="cust_credit" jdbcType="INTEGER"/>
+            <result property="custAddr" column="cust_addr" jdbcType="VARCHAR"/>
+            <result property="custZip" column="cust_zip" jdbcType="CHAR"/>
+            <result property="custTel" column="cust_tel" jdbcType="VARCHAR"/>
+            <result property="custFax" column="cust_fax" jdbcType="VARCHAR"/>
+            <result property="custWebsite" column="cust_website" jdbcType="VARCHAR"/>
+            <result property="custLicenceNo" column="cust_licence_no" jdbcType="VARCHAR"/>
+            <result property="custChieftain" column="cust_chieftain" jdbcType="VARCHAR"/>
+            <result property="custBankroll" column="cust_bankroll" jdbcType="FLOAT"/>
+            <result property="custTurnover" column="cust_turnover" jdbcType="FLOAT"/>
+            <result property="custBank" column="cust_bank" jdbcType="VARCHAR"/>
+            <result property="custBankAccount" column="cust_bank_account" jdbcType="VARCHAR"/>
+            <result property="custLocalTaxNo" column="cust_local_tax_no" jdbcType="VARCHAR"/>
+            <result property="custNationalTaxNo" column="cust_national_tax_no" jdbcType="VARCHAR"/>
+            <result property="custStatus" column="cust_status" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cust_id,cust_name,cust_region,
+        cust_manager_id,cust_manager_name,cust_level_label,
+        cust_satisfy,cust_credit,cust_addr,
+        cust_zip,cust_tel,cust_fax,
+        cust_website,cust_licence_no,cust_chieftain,
+        cust_bankroll,cust_turnover,cust_bank,
+        cust_bank_account,cust_local_tax_no,cust_national_tax_no,
+        cust_status
+    </sql>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.crm.customer.mapper.LinkmanMapper">
+
+    <resultMap id="BaseResultMap" type="com.briup.crm.customer.bean.Linkman">
+            <id property="lkmId" column="lkm_id" jdbcType="BIGINT"/>
+            <result property="lkmCustId" column="lkm_cust_id" jdbcType="BIGINT"/>
+            <result property="lkmName" column="lkm_name" jdbcType="VARCHAR"/>
+            <result property="lkmSex" column="lkm_sex" jdbcType="VARCHAR"/>
+            <result property="lkmPostion" column="lkm_postion" jdbcType="VARCHAR"/>
+            <result property="lkmTel" column="lkm_tel" jdbcType="VARCHAR"/>
+            <result property="lkmMobile" column="lkm_mobile" jdbcType="VARCHAR"/>
+            <result property="lkmMemo" column="lkm_memo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        lkm_id,lkm_cust_id,lkm_name,
+        lkm_sex,lkm_postion,lkm_tel,
+        lkm_mobile,lkm_memo
+    </sql>
+</mapper>
