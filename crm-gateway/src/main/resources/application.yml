@@ -1,0 +1,39 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: gatewayService
+  cloud:
+    gateway:
+      routes: #各个服务的路由
+        - id: auth-service #id必须唯一
+          uri: lb://authService # 路径,其中 lb LoadBalance
+          predicates: # 判断,当路径为/authservice/**时满足条件,然后向authService分发请求
+            - Path=/authservice/**
+          filters: #过滤器,在服务转发之前将最前面的一部分去除(即/authservice)
+            - StripPrefix=1
+        - id: system-service
+          uri: lb://systemService # 路径,其中 lb LoadBalance
+          predicates:
+            - Path=/systemservice/**
+          filters: #过滤器,在服务转发之前将最前面的一部分去除(即/systemserivce)
+            - StripPrefix=1
+        - id: customer-service #id必须唯一
+          uri: lb://customerService # 路径,其中 lb LoadBalance
+          predicates:
+            - Path=/customerservice/**
+          filters:
+            - StripPrefix=1
+        - id: sale-service #id必须唯一
+          uri: lb://saleService # 路径,其中 lb LoadBalance
+          predicates:
+            - Path=/saleservice/**
+          filters:
+            - StripPrefix=1
+eureka: # 将网关服务注册到eureka中
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka

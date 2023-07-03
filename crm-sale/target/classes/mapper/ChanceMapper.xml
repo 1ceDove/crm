@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.crm.sale.mapper.ChanceMapper">
+
+    <resultMap id="BaseResultMap" type="com.briup.crm.sale.bean.Chance">
+            <id property="chcId" column="chc_id" jdbcType="BIGINT"/>
+            <result property="chcSource" column="chc_source" jdbcType="VARCHAR"/>
+            <result property="chcCustName" column="chc_cust_name" jdbcType="VARCHAR"/>
+            <result property="chcTitle" column="chc_title" jdbcType="VARCHAR"/>
+            <result property="chcRate" column="chc_rate" jdbcType="INTEGER"/>
+            <result property="chcLinkman" column="chc_linkman" jdbcType="VARCHAR"/>
+            <result property="chcTel" column="chc_tel" jdbcType="VARCHAR"/>
+            <result property="chcAddr" column="chc_addr" jdbcType="VARCHAR"/>
+            <result property="chcDesc" column="chc_desc" jdbcType="VARCHAR"/>
+            <result property="chcCreateBy" column="chc_create_by" jdbcType="VARCHAR"/>
+            <result property="chcDueTo" column="chc_due_to" jdbcType="VARCHAR"/>
+            <result property="chcStatus" column="chc_status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        chc_id,chc_source,chc_cust_name,
+        chc_title,chc_rate,chc_linkman,
+        chc_tel,chc_addr,chc_desc,
+        chc_create_by,chc_due_to,chc_status
+    </sql>
+</mapper>

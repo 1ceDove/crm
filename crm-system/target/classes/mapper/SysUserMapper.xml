@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.crm.system.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.briup.crm.system.bean.SysUser">
+        <id column="usr_id" property="usrId" />
+        <result column="usr_name" property="usrName" />
+        <result column="usr_password" property="usrPassword" />
+        <result column="usr_role_name" property="usrRoleName" />
+        <result column="usr_flag" property="usrFlag" />
+        <result column="usr_role_id" property="usrRoleId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        usr_id, usr_name, usr_password, usr_role_name, usr_flag, usr_role_id
+    </sql>
+
+</mapper>

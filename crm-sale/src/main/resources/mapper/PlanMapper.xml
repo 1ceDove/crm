@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.crm.sale.mapper.PlanMapper">
+
+    <resultMap id="BaseResultMap" type="com.briup.crm.sale.bean.Plan">
+            <id property="plaId" column="pla_id" jdbcType="BIGINT"/>
+            <result property="plaChcId" column="pla_chc_id" jdbcType="BIGINT"/>
+            <result property="plaTodo" column="pla_todo" jdbcType="VARCHAR"/>
+            <result property="plaResult" column="pla_result" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        pla_id,pla_chc_id,pla_todo,
+        pla_result
+    </sql>
+</mapper>
